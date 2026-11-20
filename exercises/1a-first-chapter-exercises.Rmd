@@ -1,0 +1,28 @@
+---
+title: "Exercises: First Chapter"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+# error = TRUE lets the file knit even if one of your chunks is not finished yet
+knitr::opts_chunk$set(error = TRUE)
+```
+
+Work through this file alongside the chapter "First Chapter" in the book. Run each
+chunk with the green arrow in its top right corner, or put your cursor inside it and
+press Ctrl + Shift + Enter (Cmd + Shift + Enter on a Mac).
+
+## Set up
+
+```{r setup-values}
+library(tidyverse)
+source("my_functions.R")
+```
+
+## Part 1
+
+### The equation
+
+### The picture
+
+### The code

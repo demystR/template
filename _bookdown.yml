@@ -1,0 +1,15 @@
+book_filename: "book"   # change to the repo name, e.g. "nhst"
+new_session: true
+output_dir: "docs"
+before_chapter_script: _common.R
+delete_merged_file: true
+rmd_files:
+  - "index.Rmd"
+  - "1a-first-chapter.Rmd"
+language:
+  ui:
+    chapter_name: "Chapter "
+  label:
+    fig: "Figure "
+    tab: "Table "
+    eq: "Equation "

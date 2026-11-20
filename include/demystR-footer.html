@@ -1,0 +1,11 @@
+<script>
+/* Replace the second footer column with the series line and licence. */
+document.addEventListener("DOMContentLoaded", function () {
+  var col = document.querySelectorAll("footer div.row > div")[1];
+  if (!col) return;
+  col.innerHTML =
+    '<p>Part of the <a class="text-light dm-series" href="https://demystr.github.io">demystR</a> series: ' +
+    'statistics and decision models, built from equations, code and pictures.</p>' +
+    '<p class="small">Text, figures and data: <a class="text-light" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Code: MIT.</p>';
+});
+</script>

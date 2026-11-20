@@ -1,0 +1,12 @@
+bookdown::bs4_book:
+  default: yes
+  md_extensions: -smart
+  df_print: kable
+  includes:
+    in_header: include/header.html
+    after_body: include/demystR-footer.html
+  css:
+  - include/demystR.css
+  - book.css
+  theme:
+    primary: "#467AAC"

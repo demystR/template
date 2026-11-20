@@ -1,0 +1,9 @@
+/* This book's own rules. The shared theme is include/demystR.css: do not edit it here.
+
+   Chapters not written yet: shown in grey italics in the contents sidebar, using the
+   theme's soft ink colour. Add one line per unwritten chapter (its #id plus .html), and
+   delete the line when the chapter is written. */
+.book-toc li a[href="first-chapter.html"] {
+  color: var(--dm-ink-soft);
+  font-style: italic;
+}

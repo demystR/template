@@ -1,0 +1,142 @@
+/* demystR theme for bs4_book --------------------------------------------
+   Blue for structure, near-black for text, yellow only as a highlight.
+   Shared by every book in the series: edit here, copy to each book. */
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap");
+
+:root {
+  --dm-blue:        #467AAC;  /* main colour (logo) */
+  --dm-blue-dark:   #2F5B85;  /* hover / pressed */
+  --dm-blue-tint:   #EDF3F9;  /* summary boxes, code background */
+  --dm-ink:         #1C2530;  /* text, headings, footer */
+  --dm-ink-soft:    #4A5868;  /* secondary text */
+  --dm-yellow:      #F2C230;  /* highlight: never for text on white */
+  --dm-yellow-tint: #FFF5D1;  /* note boxes */
+  --dm-rule:        #DDE3EA;  /* lines and borders */
+}
+
+/* Type ------------------------------------------------------------------ */
+body {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--dm-ink);
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+h1, h2, h3, h4, h5, .book-part {
+  font-family: "Space Grotesk", "Inter", sans-serif;
+  font-weight: 700;
+  color: var(--dm-ink);
+  letter-spacing: -0.01em;
+}
+h1 .header-section-number, h2 .header-section-number, h3 .header-section-number {
+  color: var(--dm-blue);
+}
+code, pre, kbd { font-family: "JetBrains Mono", ui-monospace, Consolas, monospace; }
+pre, div.sourceCode {
+  background-color: var(--dm-blue-tint);
+  border: none;
+  border-radius: 6px;
+}
+p code, li code, td code {
+  background-color: var(--dm-blue-tint);
+  color: var(--dm-ink);
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
+}
+
+/* Links: blue, with a yellow underline on hover -------------------------- */
+a { color: var(--dm-blue); }
+a:hover, a:focus {
+  color: var(--dm-blue-dark);
+  text-decoration: underline;
+  text-decoration-color: var(--dm-yellow);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 3px;
+}
+
+/* Top of the page: one blue line with a thin yellow line under it -------- */
+body {
+  border-top: 6px solid var(--dm-blue);
+  box-shadow: inset 0 3px 0 var(--dm-yellow);
+}
+
+/* Sidebar: logo above the title, yellow marker on the current chapter ---- */
+.sidebar-book h1 a {
+  display: block;
+  font-size: 1.35rem;
+  color: var(--dm-ink);
+  padding-top: 92px;
+  background: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22270%22 viewBox=%220 0 300 270%22%3E %3Cpolygon points=%22150,48 46,226 254,226%22 fill=%22none%22 stroke=%22%23243447%22 stroke-width=%225%22 stroke-linejoin=%22round%22/%3E %3Ccircle cx=%22150%22 cy=%2248%22 r=%2240%22 fill=%22%23FFFFFF%22 stroke=%22%23467AAC%22 stroke-width=%225%22/%3E %3Cpolyline points=%22128,62 140,50 150,56 163,36 172,42%22 fill=%22none%22 stroke=%22%23467AAC%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E %3Ccircle cx=%2246%22 cy=%22226%22 r=%2240%22 fill=%22%23FFFFFF%22 stroke=%22%23467AAC%22 stroke-width=%225%22/%3E %3Ctext x=%2246%22 y=%22243%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2248%22 font-style=%22italic%22 fill=%22%23243447%22%3E%26%23931;%3C/text%3E %3Ccircle cx=%22254%22 cy=%22226%22 r=%2240%22 fill=%22%23FFFFFF%22 stroke=%22%23467AAC%22 stroke-width=%225%22/%3E %3Cpath d=%22M248,208 Q242,208 242,214 L242,221 Q242,226 237,226 Q242,226 242,231 L242,238 Q242,244 248,244%22 fill=%22none%22 stroke=%22%23243447%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E %3Cpath d=%22M260,208 Q266,208 266,214 L266,221 Q266,226 271,226 Q266,226 266,231 L266,238 Q266,244 260,244%22 fill=%22none%22 stroke=%22%23243447%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E %3C/svg%3E") no-repeat left top / 96px auto;
+}
+.sidebar-book h1 a:hover { text-decoration: none; color: var(--dm-blue); }
+.book-toc .book-part {
+  margin-top: 1.2rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--dm-ink-soft);
+}
+.book-toc a { color: var(--dm-ink); }
+.book-toc a.active {
+  font-weight: 600;
+  color: var(--dm-ink);
+  box-shadow: inset 4px 0 0 var(--dm-yellow);
+  padding-left: 0.6rem;
+}
+.book-toc .header-section-number { color: var(--dm-blue); }
+
+/* On-page contents (right column) */
+nav#toc .nav-link.active, nav#toc a.active {
+  color: var(--dm-ink);
+  background: transparent;
+  box-shadow: inset 4px 0 0 var(--dm-yellow);
+  padding-left: 0.6rem;
+}
+
+/* Callout boxes used in the books ---------------------------------------- */
+.summary-box {
+  background: var(--dm-blue-tint);
+  border: 1px solid var(--dm-blue);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin: 1.25rem 0;
+}
+.summary-box > :last-child, .note > :last-child { margin-bottom: 0; }
+.note {
+  background: var(--dm-yellow-tint);
+  border: 1px solid var(--dm-yellow);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin: 1.25rem 0;
+}
+mark, .highlight { background: var(--dm-yellow-tint); box-shadow: inset 0 -0.4em 0 var(--dm-yellow); }
+
+/* Tables ----------------------------------------------------------------- */
+table { border-color: var(--dm-rule); }
+thead th { border-bottom: 2px solid var(--dm-ink) !important; font-weight: 600; }
+
+/* Previous / next chapter buttons ---------------------------------------- */
+.chapter-nav .prev, .chapter-nav .next {
+  border: 1px solid var(--dm-blue);
+  border-radius: 8px;
+  box-shadow: none;
+}
+.chapter-nav .prev:hover, .chapter-nav .next:hover {
+  background: var(--dm-yellow-tint);
+  border-color: var(--dm-yellow);
+}
+.chapter-nav .prev a, .chapter-nav .next a { border: none; box-shadow: none; }
+.chapter-nav a:hover { text-decoration: none; }
+
+/* Footer: black, with yellow links on hover ------------------------------ */
+footer.bg-primary { background-color: var(--dm-ink) !important; }
+footer a.text-light:hover, footer a:hover { color: var(--dm-yellow) !important; }
+footer .dm-series { font-family: "Space Grotesk", sans-serif; font-weight: 700; }
+
+/* Unwritten chapters (listed per book in its own CSS) use this colour */
+.book-toc li a.unwritten { color: var(--dm-ink-soft); font-style: italic; }
+
+/* Figure captions and code wrapping -------------------------------------- */
+p.caption { color: var(--dm-ink-soft); margin-top: 10px; font-size: 0.92rem; }
+p code, li code, pre code { white-space: inherit; }
+pre { word-break: normal; word-wrap: normal; }

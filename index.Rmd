@@ -1,0 +1,46 @@
+--- 
+title: "Demystifying TOPIC"
+author: "Sean Westwood"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+description: |
+  One or two sentences on what this book builds, and how.
+---
+
+# Overview {-}
+
+**Author:** Sean Westwood
+
+Part of the [demystR](https://demystr.github.io) series.
+
+What the book is about, and the black box it opens.
+
+Every idea in this book is shown three ways:
+
+- **the equation**: the idea written down formally, in mathematical notation;
+- **the picture**: a figure that shows what the equation does;
+- **the code**: the same thing written in R, so you can use it on data.
+
+<div class="summary-box">
+If you can point at a term in an equation, see what it does in a figure, and find the
+line of code that computes it, you understand that part of the method.
+</div>
+
+## Who This Book Is For {-}
+
+What readers should know already, and which demystR books it builds on.
+
+## How The Book Is Organised {-}
+
+One short paragraph per part.
+
+The chapters shown in grey italics in the contents have not been written yet; each one
+describes what it will cover.
+
+## Licence {-}
+
+The text, figures and data in this book are licensed under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), so you can reuse and adapt them
+as long as you credit the source. The code is licensed under MIT, so you can copy it into
+your own work freely.

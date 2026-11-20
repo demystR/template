@@ -1,0 +1,32 @@
+# First Chapter {#first-chapter}
+
+<div class="note">
+**Not written yet.** This chapter will cover ...
+</div>
+
+Each idea gets an equation, a picture and the code, in that order.
+
+## The Equation
+
+$$
+\bar{x} = \frac{1}{n}\sum_{i=1}^{n} x_i
+$$
+
+## The Picture
+
+```{r first-chapter-figure, echo=FALSE}
+run_chunk("first-chapter-code")
+tibble(x = x) |>
+  ggplot(aes(x)) +
+  geom_histogram(bins = 20, fill = "#467AAC") +
+  geom_vline(xintercept = x_bar, linewidth = 1)
+```
+
+## The Code
+
+```{r first-chapter-code}
+set.seed(1)
+x <- rnorm(100, mean = 10, sd = 2)
+x_bar <- sum(x) / length(x)
+x_bar
+```
