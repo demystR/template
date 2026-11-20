@@ -4,9 +4,12 @@ bookdown::bs4_book:
   df_print: kable
   includes:
     in_header: include/header.html
-    after_body: include/demystR-footer.html
+    after_body:
+    - include/webex.js
+    - include/demystR-footer.html
   css:
   - include/demystR.css
+  - include/webex.css
   - book.css
   theme:
     primary: "#467AAC"

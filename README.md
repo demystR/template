@@ -54,7 +54,9 @@ deploys `docs/` to GitHub Pages. `downlit` and `xml2` are listed there because
   `my_functions.R`, the reader's own toolbox that the exercise files build up.
 - `include/`: the shared demystR theme. `demystR.css` sets the colours, fonts and
   callout boxes (`summary-box`, `note`), `header.html` adds the favicon, and
-  `demystR-footer.html` puts the series line and licence in the footer. Keep these the
+  `demystR-footer.html` puts the series line and licence in the footer. `webex.js` and
+  `webex.css` make the quiz boxes and the hint, solution and code-folding buttons work
+  (fold a chunk with the chunk option `webex.hide = "Show the code"`). Keep these the
   same in every book: change them here first, then copy to each book.
 - `book.css`: this book's own rules, such as the list of unwritten chapters shown in
   grey italics in the contents.

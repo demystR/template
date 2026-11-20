@@ -42,6 +42,15 @@ if (requireNamespace("webexercises", quietly = TRUE)) {
   unhide <- function() "</details>"
 }
 
+# Chunk option webex.hide = "Button text" folds a chunk behind a button, using hide().
+knitr::knit_hooks$set(webex.hide = function(before, options, envir) {
+  if (before) {
+    if (is.character(options$webex.hide)) hide(options$webex.hide) else hide()
+  } else {
+    unhide()
+  }
+})
+
 # Copy the data, functions and exercises into docs/ so the book can link to them.
 for (folder in c("data", "R", "exercises")) {
   files <- setdiff(list.files(folder, full.names = TRUE), file.path(folder, ".gitkeep"))
