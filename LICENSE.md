@@ -31,4 +31,5 @@ and any widgets in `apps/` are licensed under the MIT licence:
 > CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR
 > THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-The PsyTeachR style files in `include/` keep their original licence.
+The citation style `include/apa.csl` is from the [Citation Style Language](https://citationstyles.org)
+project and keeps its original licence (CC BY-SA 3.0).
