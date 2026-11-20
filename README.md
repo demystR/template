@@ -1,4 +1,4 @@
-# book-template
+# template
 
 The shared skeleton for every book in the [demystR](https://demystr.github.io) series:
 the bookdown set-up, the demystR theme, the build-and-deploy workflow, the licence and
