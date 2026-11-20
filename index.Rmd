@@ -38,6 +38,11 @@ One short paragraph per part.
 The chapters shown in grey italics in the contents have not been written yet; each one
 describes what it will cover.
 
+## Acknowledgements {-}
+
+The style and structure of these books were inspired by the
+[PsyTeachR](https://psyteachr.github.io) books from the University of Glasgow.
+
 ## Licence {-}
 
 The text, figures and data in this book are licensed under
